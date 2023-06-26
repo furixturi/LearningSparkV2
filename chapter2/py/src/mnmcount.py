@@ -23,10 +23,10 @@ if __name__ == "__main__":
     )
 
     # Calculate the count for all states
-    # 1. select "State", "Color", "Count"
-    # 2. Group each state and its M&M color count
-    # 3. Aggregate counts of all colors and alias the count "Total"
-    # 4. orderBy descending
+    # 1. Select "State", "Color", "Count"
+    # 2. Group each state and its M&M colors' counts
+    # 3. Aggregate each state's colors' counts and alias the count column name to "Total"
+    # 4. Order the results by count in descending order
     count_mnm_df = (
         mnm_df.select("State", "Color", "Count")
         .groupBy("State", "Color")
